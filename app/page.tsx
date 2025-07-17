@@ -8,6 +8,7 @@ import Project from './components/project';
 import Contect_me from './components/contect';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -54,23 +55,23 @@ export default function Home() {
               Hello, I'm <span className="text-[#FF80B5]">Pranami</span>
             </h1> */}
             <h1 className="text-4xl md:text-6xl font-bold text-white">
-             Hello, I'm{' '}
-        <motion.span
-          className="text-blue-400"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <Typewriter
-            words={['Pranami']}
-            loop={false}
-            cursor
-            cursorStyle="|" // slim vertical bar
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
-        </motion.span>
+              Hello, I'm{' '}
+              <motion.span
+                className="text-blue-400"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <Typewriter
+                  words={['Pranami']}
+                  loop={false}
+                  cursor
+                  cursorStyle="|" // slim vertical bar
+                  typeSpeed={100}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </motion.span>
             </h1>
 
 
@@ -79,8 +80,9 @@ export default function Home() {
               Full Stack Web Developer..!
             </p>
             <p className='mt-4 text-lg text-white max-w-xl'>
-              I’m on a journey of becoming a powerful full-stack developer — learning deeply, building passionately, and pushing myself to create digital experiences that feel personal and impactful.
+              I&apos;m on a journey of becoming a powerful full-stack developer — learning deeply, building passionately, and pushing myself to create digital experiences that feel personal and impactful.
             </p>
+
 
             <div className="flex gap-6 mt-6 text-2xl text-white">
               <a
@@ -111,11 +113,16 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <img
+
+
+            <Image
               src="/pranami1.png"
               alt="Pranami"
-              className="w-80 md:w-80 h-100 rounded-full shadow-lg shadow-blue-300 animate-slideUp transition-transform duration-500 hover:scale-105"
+              width={320}
+              height={400}
+              className="w-80 md:w-80 h-[400px] rounded-full shadow-lg shadow-blue-300 animate-slideUp transition-transform duration-500 hover:scale-105"
             />
+
           </motion.div>
         </div>
 

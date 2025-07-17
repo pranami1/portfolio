@@ -28,8 +28,9 @@ export default function Aboutme() {
           <br /><br />
           I possess a solid foundation in UI/UX design, problem-solving, and front-end development. Additionally, I have academic and practical knowledge of core programming languages and concepts including C, C++, Java, PHP, and DBMS.
           <br /><br />
-          I bring a blend of technical expertise and creative thinking, with a keen interest in building efficient, user-centric digital solutions. I'm not just building projects — I'm building the future version of myself with every line of code.
+          I bring a blend of technical expertise and creative thinking, with a keen interest in building efficient, user-centric digital solutions. I&apos;m not just building projects — I&apos;m building the future version of myself with every line of code.
         </p>
+
       </motion.div>
     </section>
   );
