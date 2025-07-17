@@ -1,103 +1,140 @@
-import Image from "next/image";
+'use client';
+import Navbar from './components/Navbar';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import SkillsDNA from './components/skilss';
+import Aboutme from './components/who_I_am';
+import Project from './components/project';
+import Contect_me from './components/contect';
+import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      setCursor({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMove);
+    return () => window.removeEventListener('mousemove', handleMove);
+  }, []);
+
+  return (
+    <main className="relative bg-[#1A0B2E] min-h-screen overflow-x-hidden cursor-none">
+      {/*  Dot Cursor */}
+      <div
+        className="fixed z-[9999] w-3.5 h-3.5 bg-white/80 rounded-full pointer-events-none transition-transform duration-75"
+        style={{
+          top: cursor.y,
+          left: cursor.x,
+          transform: 'translate(-50%, -50%)',
+        }}
+      />
+      {/* Blurred Background Dot */}
+      <div className="absolute w-72 h-72 bg-[#763CAC] shadow-lg shadow-pink-200 opacity-70 rounded-full blur-[120px] top-10 left-10 z-0" />
+
+      <Navbar />
+
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="z-10 flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-6 gap-8 text-center md:text-left"
+      >
+        <div className="flex-1 ml-20">
+          <motion.div
+            className="flex-1 ml-10"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+            {/* <h1 className="text-4xl md:text-6xl font-bold text-white">
+              Hello, I'm <span className="text-[#FF80B5]">Pranami</span>
+            </h1> */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white">
+             Hello, I'm{' '}
+        <motion.span
+          className="text-blue-400"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <Typewriter
+            words={['Pranami']}
+            loop={false}
+            cursor
+            cursorStyle="|" // slim vertical bar
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </motion.span>
+            </h1>
+
+
+
+            <p className="mt-4 text-4xl md:text-3xl font-bold text-white max-w-xl mx-auto md:mx-0">
+              Full Stack Web Developer..!
+            </p>
+            <p className='mt-4 text-lg text-white max-w-xl'>
+              I’m on a journey of becoming a powerful full-stack developer — learning deeply, building passionately, and pushing myself to create digital experiences that feel personal and impactful.
+            </p>
+
+            <div className="flex gap-6 mt-6 text-2xl text-white">
+              <a
+                href="https://www.linkedin.com/in/pranami-atara-6598752a5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-150 transition-transform duration-200"
+              >
+                <FaLinkedin />
+              </a>
+
+              <a
+                href="https://github.com/pranami1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-150 transition-transform duration-200 "
+              >
+                <FaGithub />
+              </a>
+
+            </div>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="flex-1 flex justify-center ">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <img
+              src="/pranami1.png"
+              alt="Pranami"
+              className="w-80 md:w-80 h-100 rounded-full shadow-lg shadow-blue-300 animate-slideUp transition-transform duration-500 hover:scale-105"
+            />
+          </motion.div>
+        </div>
+
+      </section>
+
+      {/* <div className="absolute inset-0 flex items-center justify-center z-0"/> */}
+      <SkillsDNA />
+
+      <Aboutme />
+
+      <Project />
+
+
+
+      <Contect_me />
+
+
+
+    </main >
+
   );
 }
