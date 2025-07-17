@@ -83,9 +83,12 @@ export default function SkillsDNA() {
               className="w-40 h-40 bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-xl hover:scale-105 hover:rotate-1 transition-transform duration-500 border border-white/20 flex flex-col justify-center items-center"
 
             >
-              <img
+            
+              <Image
                 src={tech.src}
                 alt={tech.name}
+                width={80}       // Required
+                height={80}      // Required
                 className="w-18 h-20 mx-auto mb-2"
               />
               <p className="text-center text-white mt-2 text-sm">{tech.name}</p>

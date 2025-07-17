@@ -5,19 +5,25 @@ import { useEffect } from 'react';
 
 export default function Navbar() {
   // Smooth scroll behavior
-  useEffect(() => {
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = (this as HTMLAnchorElement).getAttribute('href')?.slice(1);
-        const target = document.getElementById(targetId!);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  }, []);
+useEffect(() => {
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  const handleClick = function (e: Event) {
+    e.preventDefault();
+    const targetId = (this as HTMLAnchorElement).getAttribute('href')?.slice(1);
+    const target = document.getElementById(targetId!);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  links.forEach(link => link.addEventListener('click', handleClick));
+
+  return () => {
+    links.forEach(link => link.removeEventListener('click', handleClick));
+  };
+}, []);
+
 
   return (
    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#1A0B2E] shadow-md px-6 py-4">

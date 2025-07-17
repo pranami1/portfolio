@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import SkillsDNA from './components/skilss';
 import Aboutme from './components/who_I_am';
 import Project from './components/project';
-import Contect_me from './components/contect';
+import Contectme from './components/contect';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import Image from 'next/image';
@@ -55,7 +55,7 @@ export default function Home() {
               Hello, I'm <span className="text-[#FF80B5]">Pranami</span>
             </h1> */}
             <h1 className="text-4xl md:text-6xl font-bold text-white">
-              Hello, I'm{' '}
+              Hello, I&apos;m{' '}
               <motion.span
                 className="text-blue-400"
                 initial={{ opacity: 0 }}
@@ -67,8 +67,8 @@ export default function Home() {
                   loop={false}
                   cursor
                   cursorStyle="|" // slim vertical bar
-                  typeSpeed={100}
-                  deleteSpeed={50}
+                  typeSpeed={400}
+                  deleteSpeed={100}
                   delaySpeed={1000}
                 />
               </motion.span>
@@ -137,7 +137,7 @@ export default function Home() {
 
 
 
-      <Contect_me />
+      <Contectme />
 
 
 

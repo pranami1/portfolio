@@ -1,7 +1,7 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
 
-export default function Contect_me() {
+export default function Contectme() {
   return (
     
     <section

@@ -24,7 +24,7 @@ export default function Aboutme() {
         </p>
 
         <p className="my-1 text-gray-400">
-          I have completed my Diploma in Computer Engineering from Noble University, Junagadh, Gujarat (2022–2025), and I am currently pursuing my Bachelor's degree at the same institution. My current CGPA stands at 9.45.
+          I have completed my Diploma in Computer Engineering from Noble University, Junagadh, Gujarat (2022–2025), and I am currently pursuing my Bachelor&apos;s degree at the same institution. My current CGPA stands at 9.45.
           <br /><br />
           I possess a solid foundation in UI/UX design, problem-solving, and front-end development. Additionally, I have academic and practical knowledge of core programming languages and concepts including C, C++, Java, PHP, and DBMS.
           <br /><br />
