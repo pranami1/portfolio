@@ -31,7 +31,7 @@ useEffect(() => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Left Side - Logo or name */}
         <a href="#hero" className="text-base font-semibold text-white hover:text-blue-500">
-          Pranami's Portfolio
+          Pranami&apos;s Portfolio
         </a>
 
         {/* Right Side - Navigation Links */}
