@@ -8,7 +8,7 @@ export default function Contectme() {
       id="contact"
       className="relative flex items-center justify-center bg-[#1A0B2E] px-6  overflow-hidden my-30"
     >
-        {/* <hr className="my-6 border-t border-gray-300 w-full" /> */}
+       
 
       {/* Container to separate left and right */}
       <div className="flex flex-col md:flex-row justify-between w-full max-w-5xl">

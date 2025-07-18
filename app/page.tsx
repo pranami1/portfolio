@@ -10,7 +10,6 @@ import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import Image from 'next/image';
 
-
 export default function Home() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
@@ -24,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="relative bg-[#1A0B2E] min-h-screen overflow-x-hidden cursor-none">
-      {/*  Dot Cursor */}
+      {/* Custom Cursor */}
       <div
         className="fixed z-[9999] w-3.5 h-3.5 bg-white/80 rounded-full pointer-events-none transition-transform duration-75"
         style={{
@@ -33,31 +32,32 @@ export default function Home() {
           transform: 'translate(-50%, -50%)',
         }}
       />
-      {/* Blurred Background Dot */}
+      {/* Glowing Background */}
       <div className="absolute w-72 h-72 bg-[#763CAC] shadow-lg shadow-pink-200 opacity-70 rounded-full blur-[120px] top-10 left-10 z-0" />
 
       <Navbar />
 
       {/* Hero Section */}
-      <section
+      {/* <section
         id="hero"
-        className="z-10 flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-6 gap-8 text-center md:text-left"
-      >
-        <div className="flex-1 ml-20">
+        className="z-10 flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-4 md:px-10 gap-8 text-center md:text-left"
+      > */}
+      <section
+  id="hero"
+  className="z-10 flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-4 md:px-10 gap-8 text-center md:text-left pt-28 md:pt-0"
+>
+
+        <div className="flex-1">
           <motion.div
-            className="flex-1 ml-10"
+            className="md:ml-10"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-
-            {/* <h1 className="text-4xl md:text-6xl font-bold text-white">
-              Hello, I'm <span className="text-[#FF80B5]">Pranami</span>
-            </h1> */}
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">
               Hello, I&apos;m{' '}
               <motion.span
-                className="text-blue-400"
+                className="text-blue-800"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -66,7 +66,7 @@ export default function Home() {
                   words={['Pranami']}
                   loop={false}
                   cursor
-                  cursorStyle="|" // slim vertical bar
+                  cursorStyle="|"
                   typeSpeed={400}
                   deleteSpeed={100}
                   delaySpeed={1000}
@@ -74,17 +74,16 @@ export default function Home() {
               </motion.span>
             </h1>
 
-
-
-            <p className="mt-4 text-4xl md:text-3xl font-bold text-white max-w-xl mx-auto md:mx-0">
+            <p className="mt-4 text-2xl sm:text-3xl font-bold text-white">
               Full Stack Web Developer..!
             </p>
-            <p className='mt-4 text-lg text-white max-w-xl'>
-              I&apos;m on a journey of becoming a powerful full-stack developer — learning deeply, building passionately, and pushing myself to create digital experiences that feel personal and impactful.
+            <p className="mt-4 text-base sm:text-lg text-white max-w-xl mx-auto md:mx-0">
+              I&apos;m on a journey of becoming a powerful full-stack developer — learning deeply,
+              building passionately, and pushing myself to create digital experiences that feel
+              personal and impactful.
             </p>
 
-
-            <div className="flex gap-6 mt-6 text-2xl text-white">
+            <div className="flex justify-center md:justify-start gap-6 mt-6 text-2xl text-white">
               <a
                 href="https://www.linkedin.com/in/pranami-atara-6598752a5/"
                 target="_blank"
@@ -98,50 +97,36 @@ export default function Home() {
                 href="https://github.com/pranami1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-150 transition-transform duration-200 "
+                className="hover:scale-150 transition-transform duration-200"
               >
                 <FaGithub />
               </a>
-
             </div>
           </motion.div>
         </div>
 
-        <div className="flex-1 flex justify-center ">
+        <div className="flex-1 flex justify-center relative z-10">
+
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-
-
             <Image
-              src="/pranami1.png"
+              src="/pranami2.png"
               alt="Pranami"
               width={320}
               height={400}
-              className="w-80 md:w-80 h-[400px] rounded-full shadow-lg shadow-blue-300 animate-slideUp transition-transform duration-500 hover:scale-105"
+              className="w-60 sm:w-80 md:w-80 h-[350px] sm:h-[500px]  rounded-full shadow-lg shadow-blue-300 animate-slideUp transition-transform duration-500 hover:scale-105 object-cover "
             />
-
           </motion.div>
         </div>
-
       </section>
 
-      {/* <div className="absolute inset-0 flex items-center justify-center z-0"/> */}
       <SkillsDNA />
-
       <Aboutme />
-
       <Project />
-
-
-
       <Contectme />
-
-
-
-    </main >
-
+    </main>
   );
 }
