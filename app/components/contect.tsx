@@ -49,9 +49,7 @@ export default function Contectme() {
             <p className="flex items-center gap-2">
               <MdEmail className="text-white/80" /> pranamiatara@gmail.com
             </p>
-            <p className="flex items-center gap-2">
-              <MdPhone className="text-white/80" /> +91 9512588584
-            </p>
+            
           </div>
         </div>
       </div>
