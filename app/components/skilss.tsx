@@ -15,14 +15,14 @@ const skills = [
   {name:'mongoDB', src:'/tech/mongo.png'},
   { name: 'NodeJs', src: '/tech/nodejs.png' },
   {name:'ExpressJs', src:'/tech/expressjs.png'},
-  // { name: 'Firebase', src: '/tech/firebase.png' },
+ 
 ];
 export default function SkillsDNA() {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
 
   const topInView = useInView(topRef, { once: true });
-  const bottomInView = useInView(bottomRef, { once: true });
+  // const bottomInView = useInView(bottomRef, { once: true });
 
 
   return (
@@ -67,32 +67,7 @@ export default function SkillsDNA() {
             </div>
           ))}
         </div>
-      {/* </motion.div> */}
-
-      {/* Bottom 5 Skills */}
-      {/* <motion.div
-        ref={bottomRef}
-        initial={{ opacity: 0, y: 50 }}
-        animate={bottomInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7, delay: 0.3 }}
-      >
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 z-10">
-          {skills.slice(5, 10).map((tech) => (
-            <div
-              key={tech.name}
-              className="w-full aspect-square bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl shadow-xl hover:scale-105 hover:rotate-1 transition-transform duration-500 border border-white/20 flex flex-col justify-center items-center"
-            >
-              <Image
-                src={tech.src}
-                alt={tech.name}
-                width={80}
-                height={80}
-                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-2"
-              />
-              <p className="text-center text-white mt-2 text-sm">{tech.name}</p>
-            </div>
-          ))}
-        </div> */}
+     
       </motion.div>
     </section>
   );
