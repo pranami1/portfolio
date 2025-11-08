@@ -19,7 +19,7 @@ const skills = [
 ];
 export default function SkillsDNA() {
   const topRef = useRef(null);
-  const bottomRef = useRef(null);
+  
 
   const topInView = useInView(topRef, { once: true });
 
