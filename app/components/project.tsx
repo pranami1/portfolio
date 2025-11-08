@@ -6,10 +6,17 @@ import ProjectCard from './ProjectCard';
 export default function Project() {
   const projects = [
     {
+      title: 'Framerz Media Agency Site',
+      desc: 'Built a sleek, fully responsive website for Framerz Media, a professional video editing agency. Focused on creating a smooth, user-friendly experience with modern design and interactive elements. Highlighted their services, portfolio, and client showcases, delivering a polished online presence that matches the agency’s creative brand.',
+      github: 'https://framerzmedia.com/',
+       featured: true,
+    },
+    {
       title: 'Recipe App',
       desc: 'A dynamic web application that lets users search for recipes and instantly view ingredients using a real-time API. Built with HTML, CSS, and JavaScript to deliver a fast, clean, and user-friendly experience.',
       github: 'https://github.com/pranami1/Recipe-app-',
       demo: 'https://youtu.be/tdbt_pYhRSo',
+      
     },
     {
       title: 'Browser Extension',
@@ -47,11 +54,17 @@ export default function Project() {
     >
       <h1 className="text-4xl font-bold text-white my-20">Projects</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 z-10">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 z-10">
         {projects.map((proj, index) => (
           <ProjectCard key={index} proj={proj} index={index} />
         ))}
-      </div>
+      </div> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 z-10 w-full max-w-7xl">
+  {projects.map((proj, index) => (
+    <ProjectCard key={index} proj={proj} index={index} />
+  ))}
+</div>
+
     </section>
   );
 }

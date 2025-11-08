@@ -9,6 +9,7 @@ import Contectme from './components/contect';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import Image from 'next/image';
+import Experience from './components/experience';
 
 export default function Home() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -125,7 +126,9 @@ export default function Home() {
 
       <SkillsDNA />
       <Aboutme />
+      <Experience />
       <Project />
+      
       <Contectme />
     </main>
   );

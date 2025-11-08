@@ -29,7 +29,9 @@ export default function Navbar() {
       <a href="#hero" className="text-sm font-medium text-white hover:text-pink-500 px-3 py-1 rounded-md transition-all duration-300 hover:border hover:border-purple-400 hover:bg-white/10">Home</a>
       <a href="#about" className="text-sm font-medium text-white hover:text-pink-500 px-3 py-1 rounded-md transition-all duration-300 hover:border hover:border-purple-400 hover:bg-white/10">Who I Am</a>
       <a href="#skills" className="text-sm font-medium text-white hover:text-pink-500 px-3 py-1 rounded-md transition-all duration-300 hover:border hover:border-purple-400 hover:bg-white/10">Skills</a>
+      <a href="#experience" className="text-sm font-medium text-white hover:text-pink-500 px-3 py-1 rounded-md transition-all duration-300 hover:border hover:border-purple-400 hover:bg-white/10">Experience</a>
       <a href="#projects" className="text-sm font-medium text-white hover:text-pink-500 px-3 py-1 rounded-md transition-all duration-300 hover:border hover:border-purple-400 hover:bg-white/10">Projects</a>
+      
       <a href="#contact" className="text-sm font-medium text-white hover:text-pink-500 px-3 py-1 rounded-md transition-all duration-300 hover:border hover:border-purple-400 hover:bg-white/10">Contact</a>
     </>
   );
