@@ -12,6 +12,7 @@ type ProjectCardProps = {
     featured?: boolean;
   };
   index: number;
+  
 };
 
 export default function ProjectCard({ proj, index }: ProjectCardProps) {
