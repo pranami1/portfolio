@@ -22,7 +22,6 @@ export default function SkillsDNA() {
   
 
   const topInView = useInView(topRef, { once: true });
-  
 
 
   return (

@@ -5,12 +5,12 @@ import ProjectCard from './ProjectCard';
 
 export default function Project() {
   const projects = [
-    {
-      title: 'Framerz Media Agency Site',
-      desc: 'Built a sleek, fully responsive website for Framerz Media, a professional video editing agency. Focused on creating a smooth, user-friendly experience with modern design and interactive elements. Highlighted their services, portfolio, and client showcases, delivering a polished online presence that matches the agency’s creative brand.',
-      github: 'https://framerzmedia.com/',
-      featured: true,
-    },
+    // {
+    //   title: 'Framerz Media Agency Site',
+    //   desc: 'Built a sleek, fully responsive website for Framerz Media, a professional video editing agency. Focused on creating a smooth, user-friendly experience with modern design and interactive elements. Highlighted their services, portfolio, and client showcases, delivering a polished online presence that matches the agency’s creative brand.',
+    //   github: 'https://framerzmedia.com/',
+    //   featured: true,
+    // },
 
     {
       title: 'Gig-Connect Platform',
