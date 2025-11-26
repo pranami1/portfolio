@@ -13,6 +13,12 @@ export default function Project() {
     // },
 
     {
+      title:'Chatbot',
+      desc:'Developed a Gemini-powered chatbot with a polished UI, structured responses, and a secure Vercel backend to protect API keys.Focused on performance, responsiveness, and real-world API workflow.',
+      github:'https://chatbot-eight-roan-64.vercel.app/',
+      featured:true,
+    },
+    {
       title: 'Gig-Connect Platform',
       desc: 'GigConnect is a MERN-stack freelancing platform that connects clients and freelancers. Users can create profiles, post jobs, apply for work, and manage application status through a smooth, responsive interface.',
       github: 'https://gig-connect-inky.vercel.app/',
