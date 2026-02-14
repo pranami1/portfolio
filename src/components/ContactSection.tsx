@@ -36,19 +36,18 @@ const ContactSection = () => {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            I'm currently looking for new opportunities. Whether you have a question, a project idea,
-            or just want to say hi — my inbox is always open!
+            I'm currently looking for new opportunities. Whether you have a question, a project idea - let's connect! Feel free to reach out via email or connect with me on LinkedIn and GitHub.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a
+            {/* <a
               href="mailto:pranamiatara@gmail.com"
               className="neon-border rounded-lg px-8 py-3 font-mono text-sm text-primary hover:bg-primary/10 transition-all duration-300 hover:shadow-[0_0_30px_hsl(142_72%_50%/0.2)]"
             >
               Say Hello ✉️
-            </a>
+            </a> */}
             <a
-              href="https://www.linkedin.com/in/pranami-atara-572087290/"
+              href="https://www.linkedin.com/in/pranami-atara-6598752a5"
               target="_blank"
               rel="noopener noreferrer"
               className="neon-border rounded-lg px-8 py-3 font-mono text-sm text-primary hover:bg-primary/10 transition-all duration-300"

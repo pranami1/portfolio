@@ -7,7 +7,7 @@ import useTextScramble from "@/hooks/useTextScramble";
 
 const STATUS_LINES = [
   { label: "STATUS", value: "ONLINE", color: "text-primary" },
-  { label: "ROLE", value: "FULL STACK DEV", color: "text-accent" },
+  { label: "ROLE", value: "Web DEV", color: "text-accent" },
   { label: "LOCATION", value: "INDIA", color: "text-foreground" },
   { label: "OPEN_TO_WORK", value: "TRUE", color: "text-primary" },
 ];
@@ -223,7 +223,7 @@ const HeroSection = () => {
             {/* CTA buttons */}
             <div ref={ctaRef} className="flex items-center gap-4 pt-4">
               <a
-                href="https://www.linkedin.com/in/pranami-atara-572087290/"
+                href="https://www.linkedin.com/in/pranami-atara-6598752a5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden neon-border rounded-lg px-6 py-3 font-mono text-sm text-primary hover:bg-primary/10 transition-all duration-300"
@@ -260,7 +260,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Panel - Holographic Photo */}
-          <div ref={rightPanelRef} className="flex justify-center lg:justify-start mt-12 lg:mt-0">
+          <div ref={rightPanelRef} className="flex justify-center lg:justify-center mt-8 lg:mt-0">
             <div className="relative">
               {/* Holographic scan lines over photo */}
               <div className="absolute inset-0 z-20 pointer-events-none rounded-2xl overflow-hidden">
@@ -284,11 +284,12 @@ const HeroSection = () => {
               <div className="absolute -inset-4 rounded-3xl bg-primary/5 blur-3xl animate-pulse" style={{ animationDuration: "5s" }} />
 
               {/* Photo frame */}
-              <div className="relative neon-border rounded-2xl overflow-hidden w-64 h-80 sm:w-72 sm:h-96 group">
+              <div className="relative neon-border rounded-2xl overflow-hidden w-64 h-80 sm:w-72 sm:h-96 lg:w-96 lg:h-[30rem] group">
                 <img
                   src={pranamiImg}
                   alt="Pranami Atara - Full Stack Developer"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  style={{ filter: "contrast(1.03) saturate(1.05)" }}
                 />
                 {/* Color overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-primary/5 transition-opacity duration-500" />
@@ -307,6 +308,22 @@ const HeroSection = () => {
                   <p>&nbsp;&nbsp;passion: <span className="text-primary">Infinity</span>,</p>
                   <p>&nbsp;&nbsp;status: <span className="text-primary">"building"</span></p>
                   <p>{"}"}</p>
+                </div>
+              </div>
+
+              {/* Decorative tech card (fills right-side gap on large screens) */}
+              <div className="hidden lg:flex flex-col gap-3 absolute -right-36 top-6 w-40">
+                <div className="bg-background/60 border border-border/30 rounded-lg p-3 backdrop-blur-sm shadow-lg">
+                  <p className="text-[11px] font-mono text-muted-foreground mb-2">Tech stack</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-primary/5 text-primary text-[11px] rounded-md font-mono">React</span>
+                    <span className="px-2 py-1 bg-accent/5 text-accent text-[11px] rounded-md font-mono">TypeScript</span>
+                    <span className="px-2 py-1 bg-foreground/5 text-foreground text-[11px] rounded-md font-mono">Vite</span>
+                    <span className="px-2 py-1 bg-accent/5 text-accent text-[11px] rounded-md font-mono">Next.js</span>
+                  </div>
+                </div>
+                <div className="bg-background/60 border border-border/30 rounded-lg p-2 text-[11px] font-mono text-muted-foreground text-center">
+                  Projects • Contact
                 </div>
               </div>
 
