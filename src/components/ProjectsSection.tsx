@@ -6,8 +6,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Framerz Media Agency Site",
+    title: "Framerz Media ",
     desc: "Built a sleek, fully responsive website for Framerz Media, a professional video editing agency. Focused on smooth, user-friendly experience with modern design and interactive elements.",
+    tech: ["React", "Next.js", "Tailwind"],
+    links: { live: "https://www.framerzmedia.co.in/" },
+    featured: true,
+  },
+  {
+    title: "Framerz Media Podcast ",
+    desc: "Designed and developed the official Framerz Media Podcast platform using React, Typescript, and Tailwind CSS, delivering a fast, SEO-friendly, and visually engaging experience across all devices.",
     tech: ["React", "Next.js", "Tailwind"],
     links: { live: "https://framerzmedia.com/" },
     featured: true,
@@ -19,36 +26,36 @@ const projects = [
     links: { live: "https://gig-connect-inky.vercel.app/" },
     featured: true,
   },
-  {
-    title: "Recipe App",
-    desc: "Dynamic web app that lets users search for recipes and instantly view ingredients using a real-time API.",
-    tech: ["HTML", "CSS", "JavaScript", "API"],
-    links: {
-      code: "https://github.com/pranami1/Recipe-app-",
-      demo: "https://youtu.be/tdbt_pYhRSo",
-    },
-  },
-  {
-    title: "Browser Extension",
-    desc: "Custom browser extension with smooth light/dark theme toggling, enhancing user interaction from the browser toolbar.",
-    tech: ["HTML", "CSS", "JS", "Manifest"],
-    links: {
-      code: "https://github.com/pranami1/browser-extentions",
-      demo: "https://youtu.be/wTnhkorwMKA",
-    },
-  },
-  {
-    title: "My Blog App",
-    desc: "Clean and responsive blog listing app with search, light/dark theme toggle, and a user-friendly interface.",
-    tech: ["Next.js", "Tailwind", "TypeScript"],
-    links: { code: "https://github.com/pranami1/my-blog-app" },
-  },
-  {
-    title: "Netflix Clone",
-    desc: "Fully responsive Netflix front-end clone replicating the original layout, hover effects, and mobile-friendly design.",
-    tech: ["HTML", "CSS"],
-    links: { code: "https://github.com/pranami1/Netflix-clone" },
-  },
+  // {
+  //   title: "Recipe App",
+  //   desc: "Dynamic web app that lets users search for recipes and instantly view ingredients using a real-time API.",
+  //   tech: ["HTML", "CSS", "JavaScript", "API"],
+  //   links: {
+  //     code: "https://github.com/pranami1/Recipe-app-",
+  //     demo: "https://youtu.be/tdbt_pYhRSo",
+  //   },
+  // },
+  // {
+  //   title: "Browser Extension",
+  //   desc: "Custom browser extension with smooth light/dark theme toggling, enhancing user interaction from the browser toolbar.",
+  //   tech: ["HTML", "CSS", "JS", "Manifest"],
+  //   links: {
+  //     code: "https://github.com/pranami1/browser-extentions",
+  //     demo: "https://youtu.be/wTnhkorwMKA",
+  //   },
+  // },
+  // {
+  //   title: "My Blog App",
+  //   desc: "Clean and responsive blog listing app with search, light/dark theme toggle, and a user-friendly interface.",
+  //   tech: ["Next.js", "Tailwind", "TypeScript"],
+  //   links: { code: "https://github.com/pranami1/my-blog-app" },
+  // },
+  // {
+  //   title: "Netflix Clone",
+  //   desc: "Fully responsive Netflix front-end clone replicating the original layout, hover effects, and mobile-friendly design.",
+  //   tech: ["HTML", "CSS"],
+  //   links: { code: "https://github.com/pranami1/Netflix-clone" },
+  // },
 ];
 
 const ProjectsSection = () => {
@@ -138,7 +145,7 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+                {/* <div className="flex gap-3">
                   {project.links.code && (
                     <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-primary hover:underline">
                       Code ↗
@@ -149,7 +156,7 @@ const ProjectsSection = () => {
                       Demo ↗
                     </a>
                   )}
-                </div>
+                </div> */}
               </div>
             ))}
         </div>
